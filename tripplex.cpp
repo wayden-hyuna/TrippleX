@@ -1,28 +1,25 @@
 #include <iostream>
+#include "tripplex-helper.cpp"
 using namespace std;
 
 int main()
 {
-    int Code_A = 3;
-    int Code_C = 3;
-    int Code_B = 4;
+    cout << "Welcome to TripleX - WJ\n";
+    cout << "A series of ten (10) codes made up of three (3) numbers are required to break into the vault.\nAre you up for the challenge?\n"
+         << endl;
 
-    int Guess_A;
-    int Guess_C;
-    int Guess_B;
+    int Difficulty = 1;
 
-    int CodeSum = Code_A + Code_B + Code_C;
-    int CodeProd = Code_A * Code_B * Code_C;
-    cout << CodeProd << " " << CodeSum;
-    cin >> Guess_A, Guess_B, Guess_C;
-
-    int GuessSum = Guess_A + Guess_B + Guess_C;
-    int GuessProd = Guess_A * Guess_B * Guess_C;
-
-    if (CodeSum == GuessSum and CodeProd == GuessProd)
+    while (Difficulty <= 10)
     {
-        cout << "\n you win!";
+        if (playGame(Difficulty))
+            Difficulty++;
+        else
+        {
+            break;
+        }
     }
 
     return 0;
 }
+
