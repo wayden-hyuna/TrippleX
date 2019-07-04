@@ -1,10 +1,9 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 bool checkSuccess(int CodeSum, int CodeProd, int GuessSum, int GuessProd, int Difficulty);
 bool playGame(int Difficulty);
-
-
 
 bool playGame(int Difficulty)
 {
