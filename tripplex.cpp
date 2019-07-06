@@ -1,6 +1,7 @@
 #include <iostream>
 #include "tripplex-helper.cpp"
 #include <stdlib.h>
+#include <time.h>
 
 using namespace std;
 

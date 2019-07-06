@@ -7,7 +7,7 @@ bool playGame(int Difficulty);
 
 bool playGame(int Difficulty)
 {
-    cout << "Entering Level " << Difficulty << "\n";
+    cout << "# Entering Level " << Difficulty << "\n";
 
     int Code_A = rand() % Difficulty + Difficulty;
     int Code_C = rand() % Difficulty + Difficulty;
@@ -39,6 +39,11 @@ bool checkSuccess(int CodeSum, int CodeProd, int GuessSum, int GuessProd, int Di
     if (CodeSum == GuessSum && CodeProd == GuessProd && Difficulty != 10)
     {
         cout << "\nGreat job!\nOnto the next level!\n\n";
+        return true;
+    }
+    else if (CodeSum == GuessSum && CodeProd == GuessProd && Difficulty == 10)
+    {
+        cout << "\nGreat job!\nYou are in the vault!\nCongratulations\n";
         return true;
     }
     else
