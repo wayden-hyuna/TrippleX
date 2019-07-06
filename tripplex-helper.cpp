@@ -34,6 +34,7 @@ bool playGame(int Difficulty)
     return checkSuccess(CodeSum, CodeProd, GuessSum, GuessProd, Difficulty);
 }
 
+
 bool checkSuccess(int CodeSum, int CodeProd, int GuessSum, int GuessProd, int Difficulty)
 {
     if (CodeSum == GuessSum && CodeProd == GuessProd && Difficulty != 10)
